@@ -1,0 +1,7 @@
+{
+  "name": "Urban Nest",
+  "description": "A luxury real estate experience featuring Apple-inspired scroll animations, minimalist design, and AI-powered property insights using Gemini.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
