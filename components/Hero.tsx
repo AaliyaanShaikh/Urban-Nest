@@ -1,7 +1,9 @@
 
 import React, { useEffect, useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage();
   const [scrollY, setScrollY] = useState(0);
   const [isReady, setIsReady] = useState(false);
 
@@ -24,7 +26,7 @@ const Hero: React.FC = () => {
         style={{ transform: `translateY(${parallaxY}px) scale(${1 + scrollY / 10000})` }}
       >
         <img 
-          src="https://images.unsplash.com/photo-1600607687940-477a284e68c6?auto=format&fit=crop&q=80&w=2400" 
+          src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=2400" 
           alt="Luxury Architecture" 
           className="w-full h-full object-cover brightness-[0.35]"
         />
@@ -38,34 +40,34 @@ const Hero: React.FC = () => {
       >
         <div className="line-mask mb-6">
           <span className={`line-mask-inner block text-[10px] tracking-[0.8em] uppercase text-white/40 font-bold ${isReady ? 'active' : ''}`}>
-            Exclusively Lumina
+            {t('hero.exclusively')}
           </span>
         </div>
         
         <h1 className="serif text-7xl md:text-[130px] font-extralight tracking-tight mb-10 leading-[0.85] italic transition-transform duration-1000 ease-out hover:scale-[1.02] cursor-default">
           <div className="line-mask">
             <span className={`line-mask-inner transition-all duration-1000 delay-300 ${isReady ? 'active' : ''}`}>
-              The Art of
+              {t('hero.title1')}
             </span>
           </div>
           <div className="line-mask mt-2">
             <span className={`line-mask-inner bg-gradient-to-r from-white via-[#f0f0f0] to-white/10 bg-clip-text text-transparent transition-all duration-1000 delay-500 ${isReady ? 'active' : ''}`}>
-              Quiet Luxury.
+              {t('hero.title2')}
             </span>
           </div>
         </h1>
 
         <div className={`flex flex-col items-center transition-all duration-[1.5s] delay-700 ${isReady ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
           <p className="text-xl md:text-2xl text-white/30 font-light max-w-2xl mx-auto leading-relaxed mb-12">
-            A curated collection of residences where architectural soul meets precision engineering.
+            {t('hero.description')}
           </p>
           <div className="flex items-center space-x-12">
             <button className="group relative text-[10px] font-black uppercase tracking-[0.4em] pb-2 border-b border-white/10 hover:border-white transition-all">
-              Discover Estates
+              {t('hero.discover')}
               <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-500 group-hover:w-full"></div>
             </button>
             <button className="group relative text-[10px] font-black uppercase tracking-[0.4em] pb-2 border-b border-white/10 hover:border-white transition-all">
-              Private Viewings
+              {t('hero.viewings')}
               <div className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-500 group-hover:w-full"></div>
             </button>
           </div>

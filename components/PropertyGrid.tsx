@@ -1,10 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import { PROPERTIES } from '../constants';
 import { Property } from '../types';
 import VirtualTourModal from './VirtualTourModal';
 
 const PropertyGrid: React.FC = () => {
+  const { t } = useLanguage();
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
   const [scrollY, setScrollY] = useState(0);
 
@@ -28,14 +30,14 @@ const PropertyGrid: React.FC = () => {
 
       <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-12 border-b border-white/5 pb-16">
         <div className="max-w-xl">
-          <span className="serif italic text-2xl text-white/40 mb-4 block">The Collections</span>
-          <h2 className="text-5xl md:text-8xl font-bold tracking-tighter mb-8 leading-none">Curated Excellence.</h2>
+          <span className="serif italic text-2xl text-white/40 mb-4 block">{t('property.collections')}</span>
+          <h2 className="text-5xl md:text-8xl font-bold tracking-tighter mb-8 leading-none">{t('property.excellence')}</h2>
         </div>
         
         <div className="flex items-center space-x-12 text-[10px] font-black uppercase tracking-[0.4em] text-white/40">
-          <button className="text-white border-b border-white pb-2">All Listings</button>
-          <button className="hover:text-white transition-colors pb-2">Exclusive</button>
-          <button className="hover:text-white transition-colors pb-2">Archived</button>
+          <button className="text-white border-b border-white pb-2">{t('property.all')}</button>
+          <button className="hover:text-white transition-colors pb-2">{t('property.exclusive')}</button>
+          <button className="hover:text-white transition-colors pb-2">{t('property.archived')}</button>
         </div>
       </div>
       
@@ -62,7 +64,7 @@ const PropertyGrid: React.FC = () => {
                 {/* Visual Label */}
                 <div className="absolute bottom-8 right-8 overflow-hidden">
                   <span className="inline-block text-[10px] font-black uppercase tracking-[0.5em] text-white translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                    Explore Space
+                    {t('property.explore')}
                   </span>
                 </div>
               </div>
@@ -75,7 +77,7 @@ const PropertyGrid: React.FC = () => {
                 <div className="flex flex-col items-end">
                   <p className="text-2xl font-extralight tracking-tighter mb-2">{property.price}</p>
                   <div className="flex space-x-6 text-[9px] font-black uppercase tracking-[0.3em] text-white/10">
-                    <span>{property.beds} Bedrooms</span>
+                    <span>{property.beds} {t('property.bedrooms')}</span>
                     <span>{property.sqft} SQFT</span>
                   </div>
                 </div>

@@ -1,7 +1,10 @@
 
+
 import React, { useEffect, useRef, useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const ScrollReveal: React.FC = () => {
+  const { t } = useLanguage();
   const containerRef = useRef<HTMLDivElement>(null);
   const [progress, setProgress] = useState(0);
 
@@ -42,7 +45,7 @@ const ScrollReveal: React.FC = () => {
           }}
         >
           <img 
-            src="https://images.unsplash.com/photo-1600585154526-990dcea4db0d?auto=format&fit=crop&q=80&w=2400" 
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=2400" 
             alt="Interior Experience" 
             className="absolute inset-0 w-full h-full object-cover scale-[1.2]"
             style={{ transform: `scale(${1.2 - progress * 0.1})` }}
@@ -54,9 +57,9 @@ const ScrollReveal: React.FC = () => {
             className="absolute inset-0 flex flex-col items-center justify-center px-12 text-center"
             style={{ opacity: Math.max(0, progress * 1.5 - 0.5) }}
           >
-             <h3 className="serif text-4xl md:text-7xl font-extralight italic mb-8">Uncompromising Detail.</h3>
+             <h3 className="serif text-4xl md:text-7xl font-extralight italic mb-8">{t('scroll.detail')}</h3>
              <p className="text-white/40 text-sm md:text-lg max-w-xl font-light tracking-wide">
-               Our engineering team spends over 4,000 hours on every project ensuring that every joint, material, and light fixture is a masterpiece of intent.
+               {t('scroll.engineering')}
              </p>
           </div>
         </div>
@@ -69,8 +72,8 @@ const ScrollReveal: React.FC = () => {
             transform: `translateY(${headlineY}px)`
           }}
         >
-          <span className="text-[10px] font-black uppercase tracking-[1em] text-white/30 mb-6 block">Evolution</span>
-          <h2 className="serif text-5xl md:text-9xl font-light tracking-tighter italic">Beyond Walls.</h2>
+          <span className="text-[10px] font-black uppercase tracking-[1em] text-white/30 mb-6 block">{t('scroll.evolution')}</span>
+          <h2 className="serif text-5xl md:text-9xl font-light tracking-tighter italic">{t('scroll.beyond')}</h2>
         </div>
       </div>
     </div>

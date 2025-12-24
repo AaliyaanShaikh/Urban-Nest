@@ -1,12 +1,20 @@
 
 import React, { useState, useRef, useEffect } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import { askGeminiAboutRealEstate } from '../services/geminiService';
 import { ChatMessage } from '../types';
 
 const AIChat: React.FC = () => {
+  const { t, language } = useLanguage();
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'model', text: 'Good day. I am your Lumina Concierge. How may I assist you with our portfolio today?' }
+    { role: 'model', text: t('chat.greeting') }
   ]);
+  
+  useEffect(() => {
+    // Update greeting when language changes
+    setMessages([{ role: 'model', text: t('chat.greeting') }]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [language]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -43,8 +51,8 @@ const AIChat: React.FC = () => {
                 <div className="w-5 h-5 bg-black rounded-full animate-pulse"></div>
               </div>
               <div>
-                <span className="block font-bold text-sm tracking-tight">Lumina Concierge</span>
-                <span className="block text-[10px] text-green-400 font-bold uppercase tracking-widest">Available Now</span>
+                <span className="block font-bold text-sm tracking-tight">{t('chat.title')}</span>
+                <span className="block text-[10px] text-green-400 font-bold uppercase tracking-widest">{t('chat.available')}</span>
               </div>
             </div>
             <button 
@@ -91,7 +99,7 @@ const AIChat: React.FC = () => {
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Inquire about architecture or availability..."
+                placeholder={t('chat.placeholder')}
                 className="w-full bg-white/10 border border-white/10 rounded-2xl px-5 py-4 text-sm focus:outline-none focus:border-white/30 focus:bg-white/15 transition-all"
               />
               <button 
