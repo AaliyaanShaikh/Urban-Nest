@@ -42,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ onConciergeClick }) => {
           <div className="w-8 h-8 border border-white/20 rounded-full flex items-center justify-center group cursor-pointer hover:border-white transition-colors">
             <div className="w-3 h-3 bg-white rounded-full group-hover:scale-125 transition-transform"></div>
           </div>
-          <span className="font-bold tracking-[0.4em] text-lg uppercase">Lumina</span>
+          <span className="font-bold tracking-[0.4em] text-lg uppercase">Urban Nest</span>
         </div>
         
         <div className="hidden lg:flex items-center space-x-12 text-[10px] font-black uppercase tracking-[0.3em] text-white/50">

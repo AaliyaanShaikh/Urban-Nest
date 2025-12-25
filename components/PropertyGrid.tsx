@@ -5,16 +5,25 @@ import { PROPERTIES } from '../constants';
 import { Property } from '../types';
 import VirtualTourModal from './VirtualTourModal';
 
+type FilterType = 'all' | 'exclusive' | 'archived';
+
 const PropertyGrid: React.FC = () => {
   const { t } = useLanguage();
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
   const [scrollY, setScrollY] = useState(0);
+  const [activeFilter, setActiveFilter] = useState<FilterType>('all');
 
   useEffect(() => {
     const handleScroll = () => requestAnimationFrame(() => setScrollY(window.scrollY));
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Filter properties based on active filter
+  const filteredProperties = PROPERTIES.filter(property => {
+    if (activeFilter === 'all') return true;
+    return property.category === activeFilter;
+  });
 
   return (
     <section className="py-40 px-6 max-w-[1600px] mx-auto">
@@ -24,7 +33,7 @@ const PropertyGrid: React.FC = () => {
           className="text-[25vw] font-black serif uppercase whitespace-nowrap"
           style={{ transform: `translateX(${-20 + scrollY * 0.05}%)` }}
         >
-          Lumina Legacy Portfolio
+          Urban Nest Legacy Portfolio
         </div>
       </div>
 
@@ -35,15 +44,43 @@ const PropertyGrid: React.FC = () => {
         </div>
         
         <div className="flex items-center space-x-12 text-[10px] font-black uppercase tracking-[0.4em] text-white/40">
-          <button className="text-white border-b border-white pb-2">{t('property.all')}</button>
-          <button className="hover:text-white transition-colors pb-2">{t('property.exclusive')}</button>
-          <button className="hover:text-white transition-colors pb-2">{t('property.archived')}</button>
+          <button 
+            onClick={() => setActiveFilter('all')}
+            className={`transition-colors pb-2 ${
+              activeFilter === 'all' 
+                ? 'text-white border-b border-white' 
+                : 'hover:text-white'
+            }`}
+          >
+            {t('property.all')}
+          </button>
+          <button 
+            onClick={() => setActiveFilter('exclusive')}
+            className={`transition-colors pb-2 ${
+              activeFilter === 'exclusive' 
+                ? 'text-white border-b border-white' 
+                : 'hover:text-white'
+            }`}
+          >
+            {t('property.exclusive')}
+          </button>
+          <button 
+            onClick={() => setActiveFilter('archived')}
+            className={`transition-colors pb-2 ${
+              activeFilter === 'archived' 
+                ? 'text-white border-b border-white' 
+                : 'hover:text-white'
+            }`}
+          >
+            {t('property.archived')}
+          </button>
         </div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-12 gap-y-32 gap-x-12">
-        {PROPERTIES.map((property, idx) => {
-          const isLarge = idx % 3 === 0;
+        {filteredProperties.map((property, idx) => {
+          // Make property 7 (id: '7') regular size to fill remaining space
+          const isLarge = idx % 3 === 0 && property.id !== '7';
           return (
             <div 
               key={property.id} 

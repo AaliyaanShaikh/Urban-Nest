@@ -19,6 +19,10 @@ const AppContent: React.FC = () => {
     const timer = setTimeout(() => {
       setShowEntrance(false);
       setIsLoaded(true);
+      // Open the ConciergeForm popup after entrance animation
+      setTimeout(() => {
+        setIsFormOpen(true);
+      }, 500);
     }, 1500);
     return () => clearTimeout(timer);
   }, []);
@@ -32,7 +36,7 @@ const AppContent: React.FC = () => {
               <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center animate-pulse">
                 <div className="w-6 h-6 bg-black rounded-full"></div>
               </div>
-              <span className="mt-8 text-xs font-bold tracking-[1em] uppercase opacity-40 animate-pulse">Lumina</span>
+              <span className="mt-8 text-xs font-bold tracking-[1em] uppercase opacity-40 animate-pulse">Urban Nest</span>
            </div>
         </div>
       )}

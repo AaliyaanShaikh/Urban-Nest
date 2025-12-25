@@ -29,7 +29,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.concierge': 'Concierge',
     
     // Hero
-    'hero.exclusively': 'Exclusively Lumina',
+    'hero.exclusively': 'Exclusively Urban Nest',
     'hero.title1': 'The Art of',
     'hero.title2': 'Quiet Luxury.',
     'hero.description': 'A curated collection of residences where architectural soul meets precision engineering.',
@@ -40,7 +40,7 @@ const translations: Record<Language, Record<string, string>> = {
     'app.excellence': 'Excellence',
     'app.living': 'Living is an',
     'app.acquired': 'acquired taste.',
-    'app.belief': 'At Lumina, we believe a home is the most profound expression of one\'s identity. We represent the avant-garde of global real estate.',
+    'app.belief': 'At Urban Nest, we believe a home is the most profound expression of one\'s identity. We represent the avant-garde of global real estate.',
     'app.inquire': 'Inquire Privately',
     'app.future': 'The future',
     'app.residential': 'is residential.',
@@ -78,8 +78,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.impact': 'Impact',
     'footer.press': 'Press',
     'footer.careers': 'Careers',
-    'footer.offices': 'Lumina Offices',
-    'footer.copyright': '© 2024 Lumina Estates. All rights reserved.',
+    'footer.offices': 'Urban Nest Offices',
+    'footer.copyright': '© 2024 Urban Nest Estates. All rights reserved.',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
     'footer.cookies': 'Cookie Settings',
@@ -127,10 +127,10 @@ const translations: Record<Language, Record<string, string>> = {
     'form.error': 'There was an error submitting your form. Please try again.',
     
     // AI Chat
-    'chat.title': 'Lumina Concierge',
+    'chat.title': 'Urban Nest Concierge',
     'chat.available': 'Available Now',
     'chat.placeholder': 'Inquire about architecture or availability...',
-    'chat.greeting': 'Good day. I am your Lumina Concierge. How may I assist you with our portfolio today?',
+    'chat.greeting': 'Good day. I am your Urban Nest Concierge. How may I assist you with our portfolio today?',
   },
   fr: {
     // Navbar
@@ -141,7 +141,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.concierge': 'Conciergerie',
     
     // Hero
-    'hero.exclusively': 'Exclusivement Lumina',
+    'hero.exclusively': 'Exclusivement Urban Nest',
     'hero.title1': 'L\'Art du',
     'hero.title2': 'Luxe Discret.',
     'hero.description': 'Une collection soigneusement sélectionnée de résidences où l\'âme architecturale rencontre l\'ingénierie de précision.',
@@ -152,7 +152,7 @@ const translations: Record<Language, Record<string, string>> = {
     'app.excellence': 'Excellence',
     'app.living': 'Vivre est un',
     'app.acquired': 'goût acquis.',
-    'app.belief': 'Chez Lumina, nous croyons qu\'une maison est l\'expression la plus profonde de l\'identité. Nous représentons l\'avant-garde de l\'immobilier mondial.',
+    'app.belief': 'Chez Urban Nest, nous croyons qu\'une maison est l\'expression la plus profonde de l\'identité. Nous représentons l\'avant-garde de l\'immobilier mondial.',
     'app.inquire': 'Renseignements Privés',
     'app.future': 'L\'avenir',
     'app.residential': 'est résidentiel.',
@@ -190,8 +190,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.impact': 'Impact',
     'footer.press': 'Presse',
     'footer.careers': 'Carrières',
-    'footer.offices': 'Bureaux Lumina',
-    'footer.copyright': '© 2024 Lumina Estates. Tous droits réservés.',
+    'footer.offices': 'Bureaux Urban Nest',
+    'footer.copyright': '© 2024 Urban Nest Estates. Tous droits réservés.',
     'footer.privacy': 'Politique de Confidentialité',
     'footer.terms': 'Conditions d\'Utilisation',
     'footer.cookies': 'Paramètres des Cookies',
@@ -239,10 +239,10 @@ const translations: Record<Language, Record<string, string>> = {
     'form.error': 'Une erreur s\'est produite lors de l\'envoi de votre formulaire. Veuillez réessayer.',
     
     // AI Chat
-    'chat.title': 'Conciergerie Lumina',
+    'chat.title': 'Conciergerie Urban Nest',
     'chat.available': 'Disponible Maintenant',
     'chat.placeholder': 'Renseignez-vous sur l\'architecture ou la disponibilité...',
-    'chat.greeting': 'Bonjour. Je suis votre Concierge Lumina. Comment puis-je vous aider avec notre portfolio aujourd\'hui?',
+    'chat.greeting': 'Bonjour. Je suis votre Concierge Urban Nest. Comment puis-je vous aider avec notre portfolio aujourd\'hui?',
   },
   es: {
     // Navbar
@@ -253,7 +253,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.concierge': 'Conserjería',
     
     // Hero
-    'hero.exclusively': 'Exclusivamente Lumina',
+    'hero.exclusively': 'Exclusivamente Urban Nest',
     'hero.title1': 'El Arte del',
     'hero.title2': 'Lujo Discreto.',
     'hero.description': 'Una colección curada de residencias donde el alma arquitectónica se encuentra con la ingeniería de precisión.',
@@ -264,7 +264,7 @@ const translations: Record<Language, Record<string, string>> = {
     'app.excellence': 'Excelencia',
     'app.living': 'Vivir es un',
     'app.acquired': 'gusto adquirido.',
-    'app.belief': 'En Lumina, creemos que un hogar es la expresión más profunda de la identidad. Representamos la vanguardia del mercado inmobiliario global.',
+    'app.belief': 'En Urban Nest, creemos que un hogar es la expresión más profunda de la identidad. Representamos la vanguardia del mercado inmobiliario global.',
     'app.inquire': 'Consultar en Privado',
     'app.future': 'El futuro',
     'app.residential': 'es residencial.',
@@ -302,8 +302,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.impact': 'Impacto',
     'footer.press': 'Prensa',
     'footer.careers': 'Carreras',
-    'footer.offices': 'Oficinas Lumina',
-    'footer.copyright': '© 2024 Lumina Estates. Todos los derechos reservados.',
+    'footer.offices': 'Oficinas Urban Nest',
+    'footer.copyright': '© 2024 Urban Nest Estates. Todos los derechos reservados.',
     'footer.privacy': 'Política de Privacidad',
     'footer.terms': 'Términos de Servicio',
     'footer.cookies': 'Configuración de Cookies',
@@ -351,10 +351,10 @@ const translations: Record<Language, Record<string, string>> = {
     'form.error': 'Hubo un error al enviar su formulario. Por favor, inténtelo de nuevo.',
     
     // AI Chat
-    'chat.title': 'Conserjería Lumina',
+    'chat.title': 'Conserjería Urban Nest',
     'chat.available': 'Disponible Ahora',
     'chat.placeholder': 'Consulte sobre arquitectura o disponibilidad...',
-    'chat.greeting': 'Buen día. Soy su Conserje Lumina. ¿Cómo puedo ayudarle con nuestro portafolio hoy?',
+    'chat.greeting': 'Buen día. Soy su Conserje Urban Nest. ¿Cómo puedo ayudarle con nuestro portafolio hoy?',
   },
   de: {
     // Navbar
@@ -365,7 +365,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.concierge': 'Concierge',
     
     // Hero
-    'hero.exclusively': 'Exklusiv Lumina',
+    'hero.exclusively': 'Exklusiv Urban Nest',
     'hero.title1': 'Die Kunst des',
     'hero.title2': 'Stillen Luxus.',
     'hero.description': 'Eine kuratierte Sammlung von Residenzen, in der architektonische Seele auf Präzisionsingenieurwesen trifft.',
@@ -376,7 +376,7 @@ const translations: Record<Language, Record<string, string>> = {
     'app.excellence': 'Exzellenz',
     'app.living': 'Leben ist ein',
     'app.acquired': 'erworbener Geschmack.',
-    'app.belief': 'Bei Lumina glauben wir, dass ein Zuhause der tiefste Ausdruck der Identität ist. Wir vertreten die Avantgarde des globalen Immobilienmarkts.',
+    'app.belief': 'Bei Urban Nest glauben wir, dass ein Zuhause der tiefste Ausdruck der Identität ist. Wir vertreten die Avantgarde des globalen Immobilienmarkts.',
     'app.inquire': 'Privat Anfragen',
     'app.future': 'Die Zukunft',
     'app.residential': 'ist wohnlich.',
@@ -414,8 +414,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.impact': 'Wirkung',
     'footer.press': 'Presse',
     'footer.careers': 'Karrieren',
-    'footer.offices': 'Lumina Büros',
-    'footer.copyright': '© 2024 Lumina Estates. Alle Rechte vorbehalten.',
+    'footer.offices': 'Urban Nest Büros',
+    'footer.copyright': '© 2024 Urban Nest Estates. Alle Rechte vorbehalten.',
     'footer.privacy': 'Datenschutzrichtlinie',
     'footer.terms': 'Nutzungsbedingungen',
     'footer.cookies': 'Cookie-Einstellungen',
@@ -463,10 +463,10 @@ const translations: Record<Language, Record<string, string>> = {
     'form.error': 'Beim Senden Ihres Formulars ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.',
     
     // AI Chat
-    'chat.title': 'Lumina Concierge',
+    'chat.title': 'Urban Nest Concierge',
     'chat.available': 'Jetzt Verfügbar',
     'chat.placeholder': 'Fragen Sie nach Architektur oder Verfügbarkeit...',
-    'chat.greeting': 'Guten Tag. Ich bin Ihr Lumina Concierge. Wie kann ich Ihnen heute mit unserem Portfolio helfen?',
+    'chat.greeting': 'Guten Tag. Ich bin Ihr Urban Nest Concierge. Wie kann ich Ihnen heute mit unserem Portfolio helfen?',
   },
   it: {
     // Navbar
@@ -477,7 +477,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.concierge': 'Concierge',
     
     // Hero
-    'hero.exclusively': 'Esclusivamente Lumina',
+    'hero.exclusively': 'Esclusivamente Urban Nest',
     'hero.title1': 'L\'Arte del',
     'hero.title2': 'Lusso Discreto.',
     'hero.description': 'Una collezione curata di residenze dove l\'anima architettonica incontra l\'ingegneria di precisione.',
@@ -488,7 +488,7 @@ const translations: Record<Language, Record<string, string>> = {
     'app.excellence': 'Eccellenza',
     'app.living': 'Vivere è un',
     'app.acquired': 'gusto acquisito.',
-    'app.belief': 'In Lumina, crediamo che una casa sia l\'espressione più profonda dell\'identità. Rappresentiamo l\'avanguardia del mercato immobiliare globale.',
+    'app.belief': 'In Urban Nest, crediamo che una casa sia l\'espressione più profonda dell\'identità. Rappresentiamo l\'avanguardia del mercato immobiliare globale.',
     'app.inquire': 'Richiedi in Privato',
     'app.future': 'Il futuro',
     'app.residential': 'è residenziale.',
@@ -526,8 +526,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.impact': 'Impatto',
     'footer.press': 'Stampa',
     'footer.careers': 'Carriere',
-    'footer.offices': 'Uffici Lumina',
-    'footer.copyright': '© 2024 Lumina Estates. Tutti i diritti riservati.',
+    'footer.offices': 'Uffici Urban Nest',
+    'footer.copyright': '© 2024 Urban Nest Estates. Tutti i diritti riservati.',
     'footer.privacy': 'Politica sulla Privacy',
     'footer.terms': 'Termini di Servizio',
     'footer.cookies': 'Impostazioni Cookie',
@@ -575,10 +575,10 @@ const translations: Record<Language, Record<string, string>> = {
     'form.error': 'Si è verificato un errore durante l\'invio del modulo. Riprova.',
     
     // AI Chat
-    'chat.title': 'Concierge Lumina',
+    'chat.title': 'Concierge Urban Nest',
     'chat.available': 'Disponibile Ora',
     'chat.placeholder': 'Chiedi informazioni su architettura o disponibilità...',
-    'chat.greeting': 'Buongiorno. Sono il tuo Concierge Lumina. Come posso aiutarti con il nostro portfolio oggi?',
+    'chat.greeting': 'Buongiorno. Sono il tuo Concierge Urban Nest. Come posso aiutarti con il nostro portfolio oggi?',
   },
   zh: {
     // Navbar
@@ -589,7 +589,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.concierge': '礼宾服务',
     
     // Hero
-    'hero.exclusively': '独家 Lumina',
+    'hero.exclusively': '独家 Urban Nest',
     'hero.title1': '静谧',
     'hero.title2': '奢华的艺术。',
     'hero.description': '精心策划的住宅系列，建筑灵魂与精密工程完美融合。',
@@ -600,7 +600,7 @@ const translations: Record<Language, Record<string, string>> = {
     'app.excellence': '卓越',
     'app.living': '生活是一种',
     'app.acquired': '后天培养的品味。',
-    'app.belief': '在 Lumina，我们相信家是一个人身份最深刻的表达。我们代表全球房地产的前沿。',
+    'app.belief': '在 Urban Nest，我们相信家是一个人身份最深刻的表达。我们代表全球房地产的前沿。',
     'app.inquire': '私人咨询',
     'app.future': '未来',
     'app.residential': '是住宅。',
@@ -638,8 +638,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.impact': '影响',
     'footer.press': '新闻',
     'footer.careers': '职业',
-    'footer.offices': 'Lumina 办公室',
-    'footer.copyright': '© 2024 Lumina Estates. 保留所有权利。',
+    'footer.offices': 'Urban Nest 办公室',
+    'footer.copyright': '© 2024 Urban Nest Estates. 保留所有权利。',
     'footer.privacy': '隐私政策',
     'footer.terms': '服务条款',
     'footer.cookies': 'Cookie 设置',
@@ -687,10 +687,10 @@ const translations: Record<Language, Record<string, string>> = {
     'form.error': '提交表单时出错。请重试。',
     
     // AI Chat
-    'chat.title': 'Lumina 礼宾',
+    'chat.title': 'Urban Nest 礼宾',
     'chat.available': '现在可用',
     'chat.placeholder': '咨询建筑或可用性...',
-    'chat.greeting': '您好。我是您的 Lumina 礼宾。今天我可以如何帮助您了解我们的作品集？',
+    'chat.greeting': '您好。我是您的 Urban Nest 礼宾。今天我可以如何帮助您了解我们的作品集？',
   },
   ja: {
     // Navbar
@@ -701,7 +701,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.concierge': 'コンシェルジュ',
     
     // Hero
-    'hero.exclusively': '独占 Lumina',
+    'hero.exclusively': '独占 Urban Nest',
     'hero.title1': '静かな',
     'hero.title2': '贅沢の芸術。',
     'hero.description': '建築の魂が精密工学と出会う、厳選された住宅コレクション。',
@@ -712,7 +712,7 @@ const translations: Record<Language, Record<string, string>> = {
     'app.excellence': '卓越',
     'app.living': '生きることは',
     'app.acquired': '後天的な味覚です。',
-    'app.belief': 'Luminaでは、家はアイデンティティの最も深い表現であると信じています。私たちはグローバル不動産の前衛を代表しています。',
+    'app.belief': 'Urban Nestでは、家はアイデンティティの最も深い表現であると信じています。私たちはグローバル不動産の前衛を代表しています。',
     'app.inquire': '非公開でお問い合わせ',
     'app.future': '未来は',
     'app.residential': '住宅です。',
@@ -750,8 +750,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.impact': '影響',
     'footer.press': 'プレス',
     'footer.careers': 'キャリア',
-    'footer.offices': 'Luminaオフィス',
-    'footer.copyright': '© 2024 Lumina Estates. 全著作権所有。',
+    'footer.offices': 'Urban Nestオフィス',
+    'footer.copyright': '© 2024 Urban Nest Estates. 全著作権所有。',
     'footer.privacy': 'プライバシーポリシー',
     'footer.terms': '利用規約',
     'footer.cookies': 'Cookie設定',
@@ -799,10 +799,10 @@ const translations: Record<Language, Record<string, string>> = {
     'form.error': 'フォームの送信中にエラーが発生しました。もう一度お試しください。',
     
     // AI Chat
-    'chat.title': 'Luminaコンシェルジュ',
+    'chat.title': 'Urban Nestコンシェルジュ',
     'chat.available': '利用可能',
     'chat.placeholder': '建築や可用性についてお問い合わせください...',
-    'chat.greeting': 'こんにちは。私はあなたのLuminaコンシェルジュです。今日はポートフォリオについてどのようにお手伝いできますか？',
+    'chat.greeting': 'こんにちは。私はあなたのUrban Nestコンシェルジュです。今日はポートフォリオについてどのようにお手伝いできますか？',
   },
   hi: {
     // Navbar
@@ -813,7 +813,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.concierge': 'कॉन्सीयर्ज',
     
     // Hero
-    'hero.exclusively': 'विशेष रूप से Lumina',
+    'hero.exclusively': 'विशेष रूप से Urban Nest',
     'hero.title1': 'शांत',
     'hero.title2': 'लक्जरी की कला।',
     'hero.description': 'निवासों का एक क्यूरेटेड संग्रह जहां वास्तुशिल्प आत्मा सटीक इंजीनियरिंग से मिलती है।',
@@ -824,7 +824,7 @@ const translations: Record<Language, Record<string, string>> = {
     'app.excellence': 'उत्कृष्टता',
     'app.living': 'जीवन एक',
     'app.acquired': 'अर्जित स्वाद है।',
-    'app.belief': 'Lumina में, हम मानते हैं कि एक घर किसी की पहचान की सबसे गहरी अभिव्यक्ति है। हम वैश्विक रियल एस्टेट के अवांट-गार्डे का प्रतिनिधित्व करते हैं।',
+    'app.belief': 'Urban Nest में, हम मानते हैं कि एक घर किसी की पहचान की सबसे गहरी अभिव्यक्ति है। हम वैश्विक रियल एस्टेट के अवांट-गार्डे का प्रतिनिधित्व करते हैं।',
     'app.inquire': 'निजी तौर पर पूछताछ करें',
     'app.future': 'भविष्य',
     'app.residential': 'आवासीय है।',
@@ -862,8 +862,8 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.impact': 'प्रभाव',
     'footer.press': 'प्रेस',
     'footer.careers': 'करियर',
-    'footer.offices': 'Lumina कार्यालय',
-    'footer.copyright': '© 2024 Lumina Estates. सभी अधिकार सुरक्षित।',
+    'footer.offices': 'Urban Nest कार्यालय',
+    'footer.copyright': '© 2024 Urban Nest Estates. सभी अधिकार सुरक्षित।',
     'footer.privacy': 'गोपनीयता नीति',
     'footer.terms': 'सेवा की शर्तें',
     'footer.cookies': 'कुकी सेटिंग्स',
@@ -911,10 +911,10 @@ const translations: Record<Language, Record<string, string>> = {
     'form.error': 'आपके फॉर्म को सबमिट करने में एक त्रुटि हुई। कृपया पुनः प्रयास करें।',
     
     // AI Chat
-    'chat.title': 'Lumina कॉन्सीयर्ज',
+    'chat.title': 'Urban Nest कॉन्सीयर्ज',
     'chat.available': 'अभी उपलब्ध',
     'chat.placeholder': 'वास्तुकला या उपलब्धता के बारे में पूछताछ करें...',
-    'chat.greeting': 'नमस्कार। मैं आपका Lumina कॉन्सीयर्ज हूं। मैं आज हमारे पोर्टफोलियो के साथ आपकी कैसे सहायता कर सकता हूं?',
+    'chat.greeting': 'नमस्कार। मैं आपका Urban Nest कॉन्सीयर्ज हूं। मैं आज हमारे पोर्टफोलियो के साथ आपकी कैसे सहायता कर सकता हूं?',
   },
 };
 
@@ -936,7 +936,7 @@ interface LanguageProviderProps {
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(() => {
     // Get from localStorage or default to browser language
-    const saved = localStorage.getItem('lumina-language') as Language;
+    const saved = localStorage.getItem('urban-nest-language') as Language;
     if (saved && translations[saved]) {
       return saved;
     }
@@ -945,7 +945,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   });
 
   useEffect(() => {
-    localStorage.setItem('lumina-language', language);
+    localStorage.setItem('urban-nest-language', language);
   }, [language]);
 
   const setLanguage = (lang: Language) => {

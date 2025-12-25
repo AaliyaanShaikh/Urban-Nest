@@ -10,6 +10,7 @@ export interface Property {
   image: string;
   description: string;
   virtualTourUrl?: string;
+  category?: 'exclusive' | 'archived';
 }
 
 export interface ChatMessage {
