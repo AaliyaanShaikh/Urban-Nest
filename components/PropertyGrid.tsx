@@ -50,14 +50,18 @@ const PropertyGrid: React.FC = () => {
               className={`group flex flex-col ${isLarge ? 'md:col-span-8' : 'md:col-span-4'}`}
             >
               <div 
-                className={`parallax-container overflow-hidden bg-[#0a0a0a] mb-10 cursor-pointer rounded-sm transition-all duration-700 ${isLarge ? 'aspect-[21/9]' : 'aspect-[4/5]'}`}
+                className={`parallax-container relative overflow-hidden bg-[#0a0a0a] mb-10 cursor-pointer rounded-sm transition-all duration-700 ${isLarge ? 'aspect-[21/9]' : 'aspect-[4/5]'}`}
                 onClick={() => setSelectedProperty(property)}
               >
                 <img 
                   src={property.image} 
                   alt={property.title}
-                  className="parallax-img absolute w-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-110"
+                  className="parallax-img absolute inset-0 w-full h-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-110"
                   style={{ transform: `translateY(${(scrollY * (idx % 2 === 0 ? 0.05 : -0.05))}px)` }}
+                  onError={(e) => {
+                    // Fallback to a default image if the URL fails
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&q=80&w=2000';
+                  }}
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-700"></div>
                 

@@ -68,7 +68,7 @@ export const PROPERTIES: Property[] = [
     beds: 4,
     baths: 4,
     sqft: '5,200',
-    image: 'https://images.unsplash.com/photo-1600607688909-1c88a0e7f4d8?auto=format&fit=crop&q=80&w=2000',
+    image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=2000',
     description: 'A mid-century modern revival featuring an internal oasis and advanced solar integration.'
   }
 ];
