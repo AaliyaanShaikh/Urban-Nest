@@ -35,7 +35,7 @@ const VirtualTourModal: React.FC<VirtualTourModalProps> = ({ property, onClose }
         {/* Header Overlay */}
         <div className="absolute top-0 left-0 right-0 p-6 flex justify-between items-start z-10 bg-gradient-to-b from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div>
-            <h3 className="text-2xl font-bold tracking-tight">{property.title}</h3>
+            <h3 className="serif text-2xl font-light tracking-tight italic">{property.title}</h3>
             <p className="text-white/60 text-sm">{property.location} — Experience In 4K</p>
           </div>
           <button 
@@ -69,7 +69,7 @@ const VirtualTourModal: React.FC<VirtualTourModalProps> = ({ property, onClose }
         )}
 
         {/* Controls Hint */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/40 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-[10px] uppercase tracking-[0.2em] font-bold text-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/40 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 text-[10px] uppercase tracking-[0.2em] font-semibold text-white/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
            Use gestures to explore the space
         </div>
       </div>

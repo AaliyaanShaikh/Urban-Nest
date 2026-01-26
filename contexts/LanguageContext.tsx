@@ -50,7 +50,6 @@ const translations: Record<Language, Record<string, string>> = {
     // ScrollReveal
     'scroll.evolution': 'Evolution',
     'scroll.beyond': 'Beyond Walls.',
-    'scroll.detail': 'Uncompromising Detail.',
     'scroll.engineering': 'Our engineering team spends over 4,000 hours on every project ensuring that every joint, material, and light fixture is a masterpiece of intent.',
     
     // PropertyGrid
@@ -162,7 +161,6 @@ const translations: Record<Language, Record<string, string>> = {
     // ScrollReveal
     'scroll.evolution': 'Évolution',
     'scroll.beyond': 'Au-delà des Murs.',
-    'scroll.detail': 'Détail Inébranlable.',
     'scroll.engineering': 'Notre équipe d\'ingénierie consacre plus de 4 000 heures à chaque projet, garantissant que chaque joint, matériau et luminaire est un chef-d\'œuvre d\'intention.',
     
     // PropertyGrid
@@ -274,7 +272,6 @@ const translations: Record<Language, Record<string, string>> = {
     // ScrollReveal
     'scroll.evolution': 'Evolución',
     'scroll.beyond': 'Más Allá de las Paredes.',
-    'scroll.detail': 'Detalle Inquebrantable.',
     'scroll.engineering': 'Nuestro equipo de ingeniería dedica más de 4,000 horas a cada proyecto, asegurando que cada junta, material y luminaria sea una obra maestra de intención.',
     
     // PropertyGrid
@@ -386,7 +383,6 @@ const translations: Record<Language, Record<string, string>> = {
     // ScrollReveal
     'scroll.evolution': 'Evolution',
     'scroll.beyond': 'Jenseits der Wände.',
-    'scroll.detail': 'Kompromissloses Detail.',
     'scroll.engineering': 'Unser Ingenieurteam verbringt über 4.000 Stunden an jedem Projekt und stellt sicher, dass jede Verbindung, jedes Material und jede Leuchte ein Meisterwerk der Absicht ist.',
     
     // PropertyGrid

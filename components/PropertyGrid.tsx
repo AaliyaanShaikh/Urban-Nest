@@ -1,5 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
+import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { PROPERTIES } from '../constants';
 import { Property } from '../types';
@@ -10,14 +10,9 @@ type FilterType = 'all' | 'exclusive' | 'archived';
 const PropertyGrid: React.FC = () => {
   const { t } = useLanguage();
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
-  const [scrollY, setScrollY] = useState(0);
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
-
-  useEffect(() => {
-    const handleScroll = () => requestAnimationFrame(() => setScrollY(window.scrollY));
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const sectionRef = React.useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   // Filter properties based on active filter
   const filteredProperties = PROPERTIES.filter(property => {
@@ -25,108 +20,201 @@ const PropertyGrid: React.FC = () => {
     return property.category === activeFilter;
   });
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 100, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: [0.6, -0.05, 0.01, 0.99],
+      },
+    },
+  };
+
   return (
-    <section className="py-40 px-6 max-w-[1600px] mx-auto">
+    <section ref={sectionRef} className="py-40 px-6 max-w-[1600px] mx-auto bg-white relative">
       {/* Background Decorative Text */}
-      <div className="absolute left-0 w-full overflow-hidden pointer-events-none -z-10 opacity-[0.03] select-none">
-        <div 
-          className="text-[25vw] font-black serif uppercase whitespace-nowrap"
-          style={{ transform: `translateX(${-20 + scrollY * 0.05}%)` }}
-        >
+      <motion.div 
+        className="absolute left-0 w-full overflow-hidden pointer-events-none -z-10 opacity-[0.03] select-none"
+        initial={{ x: "-20%" }}
+        animate={{ x: ["-20%", "0%"] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      >
+        <div className="text-[25vw] font-light serif uppercase whitespace-nowrap text-gray-900">
           Urban Nest Legacy Portfolio
         </div>
-      </div>
+      </motion.div>
 
-      <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-12 border-b border-white/5 pb-16">
+      <motion.div 
+        className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-12 border-b border-gray-200 pb-16"
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8 }}
+      >
         <div className="max-w-xl">
-          <span className="serif italic text-2xl text-white/40 mb-4 block">{t('property.collections')}</span>
-          <h2 className="text-5xl md:text-8xl font-bold tracking-tighter mb-8 leading-none">{t('property.excellence')}</h2>
+          <motion.span 
+            className="serif italic text-2xl text-gray-400 mb-4 block font-light"
+            initial={{ opacity: 0, x: -30 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            {t('property.collections')}
+          </motion.span>
+          <motion.h2 
+            className="serif text-5xl md:text-8xl font-light tracking-tighter mb-8 leading-none text-gray-900"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            {t('property.excellence')}
+          </motion.h2>
         </div>
         
-        <div className="flex items-center space-x-12 text-[10px] font-black uppercase tracking-[0.4em] text-white/40">
-          <button 
-            onClick={() => setActiveFilter('all')}
-            className={`transition-colors pb-2 ${
-              activeFilter === 'all' 
-                ? 'text-white border-b border-white' 
-                : 'hover:text-white'
-            }`}
-          >
-            {t('property.all')}
-          </button>
-          <button 
-            onClick={() => setActiveFilter('exclusive')}
-            className={`transition-colors pb-2 ${
-              activeFilter === 'exclusive' 
-                ? 'text-white border-b border-white' 
-                : 'hover:text-white'
-            }`}
-          >
-            {t('property.exclusive')}
-          </button>
-          <button 
-            onClick={() => setActiveFilter('archived')}
-            className={`transition-colors pb-2 ${
-              activeFilter === 'archived' 
-                ? 'text-white border-b border-white' 
-                : 'hover:text-white'
-            }`}
-          >
-            {t('property.archived')}
-          </button>
-        </div>
-      </div>
+        <motion.div 
+          className="flex items-center space-x-12 text-[10px] font-semibold uppercase tracking-[0.4em] text-gray-500"
+          initial={{ opacity: 0, x: 30 }}
+          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          {(['all', 'exclusive', 'archived'] as FilterType[]).map((filter, index) => (
+            <motion.button
+              key={filter}
+              onClick={() => setActiveFilter(filter)}
+              className={`transition-colors pb-2 relative ${
+                activeFilter === filter 
+                  ? 'text-gray-900' 
+                  : 'hover:text-gray-900'
+              }`}
+              initial={{ opacity: 0, y: -10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.5 + index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              {t(`property.${filter}`)}
+              {activeFilter === filter && (
+                <motion.div
+                  className="absolute bottom-0 left-0 h-[2px] bg-gray-900"
+                  layoutId="activeFilter"
+                  initial={false}
+                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                />
+              )}
+            </motion.button>
+          ))}
+        </motion.div>
+      </motion.div>
       
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-y-32 gap-x-12">
+      <motion.div 
+        className="grid grid-cols-1 md:grid-cols-12 gap-y-32 gap-x-12"
+        variants={containerVariants}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+      >
         {filteredProperties.map((property, idx) => {
-          // Make property 7 (id: '7') regular size to fill remaining space
           const isLarge = idx % 3 === 0 && property.id !== '7';
           return (
-            <div 
+            <motion.div 
               key={property.id} 
               className={`group flex flex-col ${isLarge ? 'md:col-span-8' : 'md:col-span-4'}`}
+              variants={itemVariants}
+              whileHover={{ y: -10 }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
-              <div 
-                className={`parallax-container relative overflow-hidden bg-[#0a0a0a] mb-10 cursor-pointer rounded-sm transition-all duration-700 ${isLarge ? 'aspect-[21/9]' : 'aspect-[4/5]'}`}
+              <motion.div 
+                className={`relative overflow-hidden bg-gray-100 mb-10 cursor-pointer rounded-2xl shadow-lg ${isLarge ? 'aspect-[21/9]' : 'aspect-[4/5]'}`}
                 onClick={() => setSelectedProperty(property)}
+                whileHover={{ scale: 1.02, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
+                transition={{ duration: 0.3 }}
               >
-                <img 
+                <motion.img 
                   src={property.image} 
                   alt={property.title}
-                  className="parallax-img absolute inset-0 w-full h-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-110"
-                  style={{ transform: `translateY(${(scrollY * (idx % 2 === 0 ? 0.05 : -0.05))}px)` }}
+                  className="absolute inset-0 w-full h-full object-cover"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
                   onError={(e) => {
-                    // Fallback to a default image if the URL fails
                     (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&q=80&w=2000';
                   }}
                 />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-700"></div>
+                <motion.div 
+                  className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"
+                  initial={{ opacity: 0.4 }}
+                  whileHover={{ opacity: 0.2 }}
+                  transition={{ duration: 0.3 }}
+                />
                 
                 {/* Visual Label */}
-                <div className="absolute bottom-8 right-8 overflow-hidden">
-                  <span className="inline-block text-[10px] font-black uppercase tracking-[0.5em] text-white translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <motion.div 
+                  className="absolute bottom-8 right-8 overflow-hidden"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileHover={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <motion.span 
+                    className="inline-block text-[10px] font-semibold uppercase tracking-[0.5em] text-white bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full"
+                    initial={{ y: 100 }}
+                    whileHover={{ y: 0 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
                     {t('property.explore')}
-                  </span>
-                </div>
-              </div>
+                  </motion.span>
+                </motion.div>
+              </motion.div>
 
-              <div className="flex flex-col md:flex-row justify-between items-start gap-6 px-2">
+              <motion.div 
+                className="flex flex-col md:flex-row justify-between items-start gap-6 px-2"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+              >
                 <div>
-                  <h3 className="serif text-4xl font-light tracking-tight mb-3 italic transition-all group-hover:translate-x-2">{property.title}</h3>
-                  <p className="text-[10px] font-black text-white/20 uppercase tracking-[0.4em]">{property.location}</p>
+                  <motion.h3 
+                    className="serif text-4xl font-light tracking-tight mb-3 italic text-gray-900"
+                    whileHover={{ x: 8 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    {property.title}
+                  </motion.h3>
+                  <motion.p 
+                    className="text-[10px] font-medium text-gray-500 uppercase tracking-[0.4em]"
+                    initial={{ opacity: 0.5 }}
+                    whileHover={{ opacity: 1 }}
+                  >
+                    {property.location}
+                  </motion.p>
                 </div>
                 <div className="flex flex-col items-end">
-                  <p className="text-2xl font-extralight tracking-tighter mb-2">{property.price}</p>
-                  <div className="flex space-x-6 text-[9px] font-black uppercase tracking-[0.3em] text-white/10">
+                  <motion.p 
+                    className="text-2xl font-light tracking-tighter mb-2 text-gray-900"
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    {property.price}
+                  </motion.p>
+                  <div className="flex space-x-6 text-[9px] font-medium uppercase tracking-[0.3em] text-gray-400">
                     <span>{property.beds} {t('property.bedrooms')}</span>
                     <span>{property.sqft} SQFT</span>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           )
         })}
-      </div>
+      </motion.div>
 
       <VirtualTourModal 
         property={selectedProperty} 

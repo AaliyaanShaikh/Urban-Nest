@@ -81,21 +81,21 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
   return (
     <div className={`fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-8 transition-all duration-700 ease-in-out ${isMounted ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
       <div 
-        className="absolute inset-0 bg-black/95 backdrop-blur-2xl cursor-pointer"
+        className="absolute inset-0 bg-white/95 backdrop-blur-2xl cursor-pointer"
         onClick={onClose}
       />
       
-      <div className={`relative w-full max-w-2xl bg-black/40 backdrop-blur-3xl border border-white/10 rounded-3xl overflow-hidden shadow-[0_0_100px_rgba(255,255,255,0.1)] transition-all duration-700 ${isMounted ? 'scale-100' : 'scale-95'}`}>
+      <div className={`relative w-full max-w-2xl bg-white/95 backdrop-blur-3xl border border-gray-200 rounded-3xl overflow-hidden shadow-2xl transition-all duration-700 ${isMounted ? 'scale-100' : 'scale-95'}`}>
         {/* Header */}
-        <div className="p-8 border-b border-white/10 bg-white/5">
+        <div className="p-8 border-b border-gray-200 bg-gray-50">
           <div className="flex justify-between items-start">
             <div>
-              <h2 className="serif text-3xl md:text-4xl font-light tracking-tight italic mb-2">{t('form.title')}</h2>
-              <p className="text-white/40 text-sm font-light">{t('form.subtitle')}</p>
+              <h2 className="serif text-3xl md:text-4xl font-light tracking-tight italic mb-2 text-gray-900">{t('form.title')}</h2>
+              <p className="text-gray-600 text-sm font-light">{t('form.subtitle')}</p>
             </div>
             <button 
               onClick={onClose}
-              className="w-10 h-10 rounded-full bg-white/10 hover:bg-white text-white hover:text-black flex items-center justify-center transition-all duration-300"
+              className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-900 flex items-center justify-center transition-all duration-300"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -108,20 +108,20 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
         <form onSubmit={handleSubmit} className="p-8 space-y-6 max-h-[70vh] overflow-y-auto custom-scrollbar">
           {submitStatus === 'success' ? (
             <div className="flex flex-col items-center justify-center py-16 text-center">
-              <div className="w-20 h-20 rounded-full border border-white/20 flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="w-20 h-20 rounded-full border border-gray-300 flex items-center justify-center mb-6 bg-green-50">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="serif text-2xl font-light italic mb-2">{t('form.thankYou')}</h3>
-              <p className="text-white/60 text-sm">{t('form.success')}</p>
+              <h3 className="serif text-2xl font-light italic mb-2 text-gray-900">{t('form.thankYou')}</h3>
+              <p className="text-gray-600 text-sm">{t('form.success')}</p>
             </div>
           ) : (
             <>
               {/* Personal Information */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-[10px] font-black uppercase tracking-[0.3em] text-white/50 mb-3">
+                  <label htmlFor="name" className="block text-[10px] font-semibold uppercase tracking-[0.3em] text-gray-500 mb-3">
                     {t('form.name')} *
                   </label>
                   <input
@@ -131,12 +131,12 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all"
+                    className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-gray-400 focus:bg-white transition-all placeholder:text-gray-400"
                     placeholder={t('form.placeholder.name')}
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-[10px] font-black uppercase tracking-[0.3em] text-white/50 mb-3">
+                  <label htmlFor="email" className="block text-[10px] font-semibold uppercase tracking-[0.3em] text-gray-500 mb-3">
                     {t('form.email')} *
                   </label>
                   <input
@@ -146,7 +146,7 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all"
+                    className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-gray-400 focus:bg-white transition-all placeholder:text-gray-400"
                     placeholder={t('form.placeholder.email')}
                   />
                 </div>
@@ -154,7 +154,7 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="phone" className="block text-[10px] font-black uppercase tracking-[0.3em] text-white/50 mb-3">
+                  <label htmlFor="phone" className="block text-[10px] font-semibold uppercase tracking-[0.3em] text-gray-500 mb-3">
                     {t('form.phone')}
                   </label>
                   <input
@@ -163,12 +163,12 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all"
+                    className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-gray-400 focus:bg-white transition-all placeholder:text-gray-400"
                     placeholder={t('form.placeholder.phone')}
                   />
                 </div>
                 <div>
-                  <label htmlFor="inquiry" className="block text-[10px] font-black uppercase tracking-[0.3em] text-white/50 mb-3">
+                  <label htmlFor="inquiry" className="block text-[10px] font-semibold uppercase tracking-[0.3em] text-gray-500 mb-3">
                     {t('form.inquiry')} *
                   </label>
                   <select
@@ -177,7 +177,7 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
                     value={formData.inquiry}
                     onChange={handleChange}
                     required
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all"
+                    className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-gray-400 focus:bg-white transition-all"
                   >
                     <option value="">{t('form.select')}</option>
                     <option value="viewing">{t('form.viewing')}</option>
@@ -191,7 +191,7 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
 
               {/* Property Interest */}
               <div>
-                <label htmlFor="propertyInterest" className="block text-[10px] font-black uppercase tracking-[0.3em] text-white/50 mb-3">
+                <label htmlFor="propertyInterest" className="block text-[10px] font-semibold uppercase tracking-[0.3em] text-gray-500 mb-3">
                   {t('form.property')}
                 </label>
                 <input
@@ -200,14 +200,14 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
                   name="propertyInterest"
                   value={formData.propertyInterest}
                   onChange={handleChange}
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all"
+                  className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-gray-400 focus:bg-white transition-all placeholder:text-gray-400"
                   placeholder={t('form.placeholder.property')}
                 />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="timeline" className="block text-[10px] font-black uppercase tracking-[0.3em] text-white/50 mb-3">
+                  <label htmlFor="timeline" className="block text-[10px] font-semibold uppercase tracking-[0.3em] text-gray-500 mb-3">
                     {t('form.timeline')}
                   </label>
                   <select
@@ -215,7 +215,7 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
                     name="timeline"
                     value={formData.timeline}
                     onChange={handleChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all"
+                    className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-gray-400 focus:bg-white transition-all"
                   >
                     <option value="">{t('form.selectTimeline')}</option>
                     <option value="immediate">{t('form.immediate')}</option>
@@ -226,7 +226,7 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="budget" className="block text-[10px] font-black uppercase tracking-[0.3em] text-white/50 mb-3">
+                  <label htmlFor="budget" className="block text-[10px] font-semibold uppercase tracking-[0.3em] text-gray-500 mb-3">
                     {t('form.budget')}
                   </label>
                   <select
@@ -234,7 +234,7 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
                     name="budget"
                     value={formData.budget}
                     onChange={handleChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all"
+                    className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-gray-400 focus:bg-white transition-all"
                   >
                     <option value="">{t('form.selectRange')}</option>
                     <option value="under-1m">{t('form.under1m')}</option>
@@ -249,7 +249,7 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-[10px] font-black uppercase tracking-[0.3em] text-white/50 mb-3">
+                <label htmlFor="message" className="block text-[10px] font-semibold uppercase tracking-[0.3em] text-gray-500 mb-3">
                   {t('form.message')}
                 </label>
                 <textarea
@@ -258,13 +258,13 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all resize-none"
+                  className="w-full bg-white border border-gray-200 rounded-lg px-4 py-3 text-sm text-gray-900 focus:outline-none focus:border-gray-400 focus:bg-white transition-all resize-none placeholder:text-gray-400"
                   placeholder={t('form.placeholder.message')}
                 />
               </div>
 
               {submitStatus === 'error' && (
-                <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 text-sm text-red-400">
+                <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-sm text-red-600">
                   {t('form.error')}
                 </div>
               )}
@@ -274,14 +274,14 @@ const ConciergeForm: React.FC<ConciergeFormProps> = ({ isOpen, onClose }) => {
                 <button
                   type="button"
                   onClick={onClose}
-                  className="px-8 py-3 text-[10px] font-black uppercase tracking-widest text-white/50 hover:text-white transition-colors"
+                  className="px-8 py-3 text-[10px] font-semibold uppercase tracking-widest text-gray-500 hover:text-gray-900 transition-colors"
                 >
                   {t('form.cancel')}
                 </button>
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-10 py-3 bg-white text-black text-[10px] font-black uppercase tracking-widest hover:bg-zinc-200 transition-all active:scale-95 rounded-full disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-10 py-3 bg-gray-900 text-white text-[10px] font-semibold uppercase tracking-widest hover:bg-gray-800 transition-all active:scale-95 rounded-full disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
                 >
                   {isSubmitting ? t('form.submitting') : t('form.submit')}
                 </button>
