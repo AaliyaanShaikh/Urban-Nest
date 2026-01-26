@@ -55,30 +55,6 @@ const ScrollReveal: React.FC = () => {
             }}
           />
           
-          {/* Internal Content */}
-          <motion.div 
-            className="absolute inset-0 flex flex-col items-center justify-center px-12 text-center"
-            style={{ opacity: textOpacity }}
-          >
-            <motion.h3 
-              className="serif text-4xl md:text-7xl font-light italic mb-8 text-gray-900"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: "-200px" }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-            >
-              {t('scroll.detail')}
-            </motion.h3>
-            <motion.p 
-              className="text-gray-600 text-sm md:text-lg max-w-xl font-light tracking-wide"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: "-200px" }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-            >
-              {t('scroll.engineering')}
-            </motion.p>
-          </motion.div>
         </motion.div>
 
         {/* Floating Narrative Text */}

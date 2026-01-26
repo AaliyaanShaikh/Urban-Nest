@@ -50,7 +50,6 @@ const translations: Record<Language, Record<string, string>> = {
     // ScrollReveal
     'scroll.evolution': 'Evolution',
     'scroll.beyond': 'Beyond Walls.',
-    'scroll.engineering': 'Our engineering team spends over 4,000 hours on every project ensuring that every joint, material, and light fixture is a masterpiece of intent.',
     
     // PropertyGrid
     'property.collections': 'The Collections',
@@ -161,7 +160,6 @@ const translations: Record<Language, Record<string, string>> = {
     // ScrollReveal
     'scroll.evolution': 'Évolution',
     'scroll.beyond': 'Au-delà des Murs.',
-    'scroll.engineering': 'Notre équipe d\'ingénierie consacre plus de 4 000 heures à chaque projet, garantissant que chaque joint, matériau et luminaire est un chef-d\'œuvre d\'intention.',
     
     // PropertyGrid
     'property.collections': 'Les Collections',
@@ -272,7 +270,6 @@ const translations: Record<Language, Record<string, string>> = {
     // ScrollReveal
     'scroll.evolution': 'Evolución',
     'scroll.beyond': 'Más Allá de las Paredes.',
-    'scroll.engineering': 'Nuestro equipo de ingeniería dedica más de 4,000 horas a cada proyecto, asegurando que cada junta, material y luminaria sea una obra maestra de intención.',
     
     // PropertyGrid
     'property.collections': 'Las Colecciones',
@@ -383,7 +380,6 @@ const translations: Record<Language, Record<string, string>> = {
     // ScrollReveal
     'scroll.evolution': 'Evolution',
     'scroll.beyond': 'Jenseits der Wände.',
-    'scroll.engineering': 'Unser Ingenieurteam verbringt über 4.000 Stunden an jedem Projekt und stellt sicher, dass jede Verbindung, jedes Material und jede Leuchte ein Meisterwerk der Absicht ist.',
     
     // PropertyGrid
     'property.collections': 'Die Kollektionen',
@@ -494,8 +490,6 @@ const translations: Record<Language, Record<string, string>> = {
     // ScrollReveal
     'scroll.evolution': 'Evoluzione',
     'scroll.beyond': 'Oltre le Mura.',
-    'scroll.detail': 'Dettaglio Inflessibile.',
-    'scroll.engineering': 'Il nostro team di ingegneria dedica oltre 4.000 ore a ogni progetto, assicurando che ogni giunto, materiale e apparecchio di illuminazione sia un capolavoro di intento.',
     
     // PropertyGrid
     'property.collections': 'Le Collezioni',
@@ -606,8 +600,6 @@ const translations: Record<Language, Record<string, string>> = {
     // ScrollReveal
     'scroll.evolution': '进化',
     'scroll.beyond': '超越墙壁。',
-    'scroll.detail': '毫不妥协的细节。',
-    'scroll.engineering': '我们的工程团队在每个项目上花费超过 4,000 小时，确保每个接缝、材料和灯具都是意图的杰作。',
     
     // PropertyGrid
     'property.collections': '系列',
@@ -718,8 +710,6 @@ const translations: Record<Language, Record<string, string>> = {
     // ScrollReveal
     'scroll.evolution': '進化',
     'scroll.beyond': '壁を超えて。',
-    'scroll.detail': '妥協のない詳細。',
-    'scroll.engineering': '私たちのエンジニアリングチームは、各プロジェクトに4,000時間以上を費やし、すべての接合部、材料、照明器具が意図の傑作であることを保証しています。',
     
     // PropertyGrid
     'property.collections': 'コレクション',
@@ -830,8 +820,6 @@ const translations: Record<Language, Record<string, string>> = {
     // ScrollReveal
     'scroll.evolution': 'विकास',
     'scroll.beyond': 'दीवारों से परे।',
-    'scroll.detail': 'अटूट विस्तार।',
-    'scroll.engineering': 'हमारी इंजीनियरिंग टीम हर प्रोजेक्ट पर 4,000 से अधिक घंटे खर्च करती है, यह सुनिश्चित करते हुए कि हर जोड़, सामग्री और लाइट फिक्सचर इरादे की एक कृति है।',
     
     // PropertyGrid
     'property.collections': 'संग्रह',
