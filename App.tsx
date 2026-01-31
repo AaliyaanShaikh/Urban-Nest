@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import ScrollReveal from './components/ScrollReveal';
 import PropertyGrid from './components/PropertyGrid';
 import PersonalBranding from './components/PersonalBranding';
+import CinematicGrid from './components/CinematicGrid';
 import InstagramShowcase from './components/InstagramShowcase';
 import AIChat from './components/AIChat';
 import Footer from './components/Footer';
@@ -123,79 +124,17 @@ const AppContent: React.FC = () => {
             <main>
               <Hero />
               
-              <motion.section 
-                className="py-60 flex flex-col items-center justify-center text-center px-6 bg-gradient-to-b from-white via-gray-50 to-white"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.8 }}
-              >
-                <div className="max-w-4xl relative">
-                  <motion.div 
-                    className="absolute -top-20 left-1/2 -translate-x-1/2 text-9xl font-light text-gray-100 select-none serif italic uppercase tracking-[0.2em]"
-                    animate={{
-                      opacity: [0.1, 0.15, 0.1],
-                    }}
-                    transition={{
-                      duration: 4,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    {t('app.excellence')}
-                  </motion.div>
-                  
-                  <motion.h2 
-                    className="serif text-4xl md:text-8xl font-light tracking-tighter mb-12 leading-[1.1] italic text-gray-900"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                  >
-                    {t('app.living')} <br />
-                    <motion.span 
-                      className="text-gray-400"
-                      animate={{
-                        opacity: [0.4, 0.6, 0.4],
-                      }}
-                      transition={{
-                        duration: 3,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                    >
-                      {t('app.acquired')}
-                    </motion.span>
-                  </motion.h2>
-                  <motion.div 
-                    className="w-16 h-[2px] bg-gradient-to-r from-transparent via-gray-300 to-transparent mx-auto mb-12"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: 64 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.4 }}
-                  />
-                  <motion.p 
-                    className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light max-w-2xl mx-auto"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.5 }}
-                  >
-                    {t('app.belief')}
-                  </motion.p>
-                </div>
-              </motion.section>
+              <PersonalBranding />
+
+              <CinematicGrid />
+
+              <InstagramShowcase />
 
               <ScrollReveal />
-              
+
               <div id="portfolio">
                 <PropertyGrid />
               </div>
-
-              <PersonalBranding />
-
-              <InstagramShowcase />
-              
               <motion.section 
                 className="py-60 px-6 text-center bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden"
                 initial={{ opacity: 0 }}
